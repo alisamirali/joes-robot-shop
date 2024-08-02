@@ -1,10 +1,12 @@
-# JoesRobotShop
+# Robot Shop
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1- Run `ng serve` for a dev server. Navigate to `http://localhost:4200`. The application will automatically reload if you change any of the source files.
+
+2- Navigate to the `api-server` folder and run `npm i` then `npm start` to start the API server to fetch project data.
 
 ## Build
 
