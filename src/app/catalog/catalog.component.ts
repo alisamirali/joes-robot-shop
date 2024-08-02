@@ -18,7 +18,7 @@ export class CatalogComponent {
     private productSvc: ProductService,
     private router: Router,
     private route: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.productSvc.getProducts().subscribe((products) => {
@@ -26,20 +26,19 @@ export class CatalogComponent {
     });
     this.route.queryParams.subscribe((params) => {
       this.filter = params['filter'] ?? '';
-    });
+    })
   }
 
   addToCart(product: IProduct) {
     this.cartSvc.add(product);
-
-    alert('Added ' + product.name + ' to cart!');
+    this.router.navigate(['/cart']);
   }
 
   getFilteredProducts() {
     return this.filter === ''
       ? this.products
       : this.products.filter(
-          (product: any) => product.category === this.filter
-        );
+        (product: any) => product.category === this.filter
+      );
   }
 }
